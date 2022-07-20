@@ -2,8 +2,9 @@ const axios = require("axios");
 
 const BASE_URL = "https://expressjs-production-cb4b.up.railway.app/translate/";
 
+// comment out the ones you do not need.
 const LAN = "fr";
-// const LAN = 'cn';
+// const LAN = 'zh';
 // const LAN = 'es';
 
 const english = {
@@ -310,8 +311,7 @@ const english = {
 axios
   .post(`${BASE_URL}${LAN}`, english)
   .then((res) => {
-    console.log(res);
-    console.log(JSON.stringify(res));
+    console.log(JSON.stringify(res.data));
   })
   .catch((error) => {
     console.error(error);
